@@ -8,7 +8,7 @@ const Nav = () => (
         <Link to="/"> <p> <SiPrisma className="icon" /> </p></Link>
         <Link to="/"> <p> Marcas </p></Link>
         <Link to="/catalogo"> <p> Catalogo </p></Link>
-        <Link to="/registro"> <p> <FaUserCircle className="icon" /> </p></Link>
+        <Link to="/login"> <p> <FaUserCircle className="icon" /> </p></Link>
      </div>
 )
 

@@ -23,7 +23,23 @@ h1 {
     color: white;
     border: 2px black solid;
     box-shadow: 0 0 15px rgb(174, 174, 174);
+    cursor: default;
+}
 
+.pad {
+    font-size: 20px;
+    background-color: rgb(26, 126, 66);
+    padding: 4px;
+    border-radius: 8px;
+    color: white;
+    border: 2px black solid;
+    box-shadow: 0 0 15px rgb(174, 174, 174);
+    cursor: default;
+}
+
+.botonlink {
+    color: white;
+    font-weight: bold;
 }
 
 Form {

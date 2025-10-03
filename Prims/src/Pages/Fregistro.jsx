@@ -19,20 +19,24 @@ export default function Fregistro(){
         }
 
         try{
-            const res = await fetch('http://localhost:8000/crear',{
+            const res = await fetch('http://localhost:8000/crear', {
                 method:'POST',
                 headers:{ 'Content-Type':'application/json' },
                 body:JSON.stringify(data)
             })
 
+             const resData = await res.json();
+
             if(res.ok){
-                const resData = await res.json()
                 alert(resData.message)
 
                 setNombre('')
                 setCorreo('')
                 setTelefono('')
                 setContra('')
+            
+            }else{
+                alert(resData.message);  
             }
         }
         catch(err){
@@ -50,6 +54,10 @@ export default function Fregistro(){
             setCorreo = {setCorreo}
             setTelefono = {setTelefono}
             setContra = {setContra}
+            nombre={Nombre}
+            correo={Correo}
+            telefono={Telefono}
+            contra={Contra}
         />
         </>
     )
