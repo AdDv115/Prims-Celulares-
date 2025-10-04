@@ -1,0 +1,38 @@
+CREATE DATABASE BDCelulares
+    DEFAULT CHARACTER SET = 'utf8mb4';
+USE BDCelulares;
+
+CREATE TABLE Usuarios(
+    ID_User INT(5) PRIMARY KEY AUTO_INCREMENT,
+    Nombre VARCHAR(100),
+    Correo VARCHAR(255),
+    Contraseña VARCHAR(255)
+)
+
+CREATE TABLE Orden(
+    ID_Orden INT(5) PRIMARY KEY AUTO_INCREMENT,
+    Fecha DATE,
+    Estado VARCHAR(15),
+    Total_Orden DECIMAL(10,2),
+    ID_USER INT,
+    Foreign Key (ID_USER) REFERENCES Usuarios(ID_User)
+)
+
+CREATE TABLE Productos(
+    ID_Producto INT(5) PRIMARY KEY AUTO_INCREMENT,
+    Modelo VARCHAR(50),
+    Marca VARCHAR(50),
+    Descripcion VARCHAR(255),
+    Precio DECIMAL(10,2),
+    Imagen VARCHAR(255)
+)
+
+CREATE TABLE Orden_Productos(
+    ID_OP INT(5) PRIMARY KEY AUTO_INCREMENT,
+    Cantidad INT(10),
+    PrecioU DECIMAL(10,2),
+    ID_ORDEN INT,
+    ID_PRODUCTO INT,
+    Foreign Key (ID_ORDEN) REFERENCES Orden(ID_Orden),
+    Foreign Key (ID_PRODUCTO) REFERENCES Productos(ID_Producto)
+)

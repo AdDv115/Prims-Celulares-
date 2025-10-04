@@ -4,6 +4,7 @@ import Fregistro from './Pages/Fregistro'
 import Flogin from './Pages/Flogin'
 import Fadmin from './Pages/Fadmin'
 import Perfil from './Componentes/perfil'
+import Catalogo from './Componentes/Catalogo'
 
 const App = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => (
       <Route exact path = "/registro" element = {<Fregistro />} />
       <Route exact path = "/admin" element = {<Fadmin />} />
       <Route exact path = '/perfil' element = {<Perfil />} />
+      <Route exact path = '/catalogo' element = {<Catalogo/>} />
     </Routes>
   </BrowserRouter>
 )

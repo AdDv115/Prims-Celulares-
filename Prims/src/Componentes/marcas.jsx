@@ -25,7 +25,7 @@ export default function App() {
   return (
     <div className={styles.body}>
       <div className={styles.animated__layers}>
-        {/* Rectángulo */}
+    
         <animated.div
           className={styles.dot}
           style={{
@@ -36,7 +36,7 @@ export default function App() {
         </animated.div>
       </div>
 
-      {/* Páginas */}
+    
       {Array.from({ length: PAGE_COUNT }).map((_, index) => (
         <div className={styles.full__page} key={index} />
       ))}

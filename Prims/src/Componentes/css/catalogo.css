@@ -1,0 +1,45 @@
+.catalogo {
+  padding: 20px;
+  background-color: #f8fff9; /* Blanco verdoso muy suave */
+  font-family: Arial, sans-serif;
+}
+
+.titulo-marca {
+  color: #2f7d32; /* Verde elegante */
+  margin: 15px 0;
+  border-left: 6px solid #4caf50;
+  padding-left: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #cce5cc;
+  border-radius: 12px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #2f7d32;
+}
